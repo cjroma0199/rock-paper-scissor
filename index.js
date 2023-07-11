@@ -1,6 +1,7 @@
 function getComputerChoice() {
+  const choices = ["rock", "paper", "scissor"];
   const randomNumber = Math.floor(Math.random() * 3);
-  return choices[randomNumber].toLowerCase();
+  return choices[randomNumber];
 }
 
 function playerSelection() {
@@ -16,7 +17,8 @@ function playRound(computerChoice, playerChoice) {
     return `You lose! ${computerChoice} beats ${playerChoice}`;
   }
 
-  if (computerChoice == playerChoice) return "Tie!";
+  if (computerChoice == playerChoice)
+    return `It's ${computerChoice} vs ${playerChoice}! It's a Tie!`;
 
   return `You win! ${playerChoice} beats ${computerChoice}`;
 }
