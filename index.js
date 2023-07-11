@@ -1,5 +1,6 @@
+const choices = ["rock", "paper", "scissor"];
+
 function getComputerChoice() {
-  const choices = ["rock", "paper", "scissor"];
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
 }
@@ -9,6 +10,10 @@ function playerSelection() {
 }
 
 function playRound(computerChoice, playerChoice) {
+  if (!isValidChoice(playerChoice)) {
+    return "Invalid choice! Your choices are rock, paper, and scissor.";
+  }
+
   if (
     (computerChoice == "rock" && playerChoice == "scissor") ||
     (computerChoice == "paper" && playerChoice == "rock") ||
@@ -21,6 +26,10 @@ function playRound(computerChoice, playerChoice) {
     return `It's ${computerChoice} vs ${playerChoice}! It's a Tie!`;
 
   return `You win! ${playerChoice} beats ${computerChoice}`;
+}
+
+function isValidChoice(choice) {
+  return choices.includes(choice);
 }
 
 function game() {
