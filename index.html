@@ -3,9 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock, Paper, Scissor</title>
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="header">
+      <h1 class="title">
+        <span class="rock">Rock</span> <span class="paper">Paper</span>
+        <span class="scissor">Scissors</span>
+      </h1>
+    </div>
+    <div class="container">
+      <div class="content">
+        <div class="contender_section">
+          <div class="name">Player</div>
+          <div class="round_text">Round</div>
+          <div class="name">Computer</div>
+        </div>
+        <div class="health_section">
+          <div class="health"></div>
+          <div class="round-number">0</div>
+          <div class="health"></div>
+        </div>
+        <div class="battle_window">
+          <div class="player_side"></div>
+          <div class="computer_side"></div>
+        </div>
+        <div class="choose_weapon">
+          <p>Choose your weapon</p>
+        </div>
+        <div class="weapon_section">
+          <img src="./img/rock.png" alt="rock hand gesture" class="weapons" />
+          <img src="./img/paper.png" alt="paper hand gesture" class="weapons" />
+          <img
+            src="./img/scissor.png"
+            alt="scissor hand gesture"
+            class="weapons"
+          />
+        </div>
+      </div>
+      <div class="footer">
+        <p class="copyright">CJ</p>
+      </div>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
