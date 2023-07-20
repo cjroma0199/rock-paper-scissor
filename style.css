@@ -11,6 +11,10 @@ body {
   margin: 0 auto;
   font-family: "Press Start 2P", cursive;
   color: #b6eada;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .header {
@@ -24,19 +28,126 @@ body {
 }
 
 .container {
-  width: 30%;
-  margin: 0 auto;
+  flex: 2 auto;
+  width: 40%;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
 }
 
-.content {
-  /* background-color: white; */
+.contender_section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.health {
+  min-width: 250px;
+  height: 20px;
+  margin-top: 10px;
+  display: flex;
+  border: 2px white;
+  border-style: ridge;
+}
+
+.health_bar {
+  background-color: green;
+  width: 100%;
+  transition: width 0.5s;
+}
+
+.round .count {
+  margin-top: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  color: #fcb830;
+}
+
+.computer .health {
+  flex-direction: row-reverse;
+}
+
+.computer .name {
+  text-align: end;
+}
+
+.window {
+  margin: 20px 0;
+  width: 100%;
+  height: 400px;
+  /* border: 3px ridge white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winner {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.outcome_winner {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.battle_window {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 100%;
+  /* border: 1px solid green; */
+}
+.player_window,
+.computer_window {
+  /* border: 1px solid red; */
+  width: 35%;
+  height: auto;
+}
+
+.weapon_section {
+  display: flex;
+}
+
+.choose_weapon {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.3em;
+}
+
+.weapon_section {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .weapon_section .weapons {
-  width: 150px;
-  height: 150px;
+  width: 80px;
+}
+
+.rock,
+.paper,
+.scissor {
+  transition: transform 0.5s, color 0.5s;
+}
+
+.weapon_section .rock:hover,
+.weapon_section .paper:hover,
+.weapon_section .scissor:hover {
+  cursor: pointer;
+  color: #5b8fb9;
+  transform: scale(1.1);
+}
+
+.image_holder {
+  font-size: 14em;
+  color: #fcb830;
+}
+
+.vs {
+  font-size: 1.5em;
+}
+
+.footer {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }

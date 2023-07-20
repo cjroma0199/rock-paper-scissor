@@ -8,43 +8,70 @@
   </head>
   <body>
     <div class="header">
-      <h1 class="title">
-        <span class="rock">Rock</span> <span class="paper">Paper</span>
-        <span class="scissor">Scissors</span>
-      </h1>
+      <h1 class="title">Rock Paper Scissors</h1>
     </div>
     <div class="container">
-      <div class="content">
-        <div class="contender_section">
+      <div class="contender_section">
+        <div class="player">
           <div class="name">Player</div>
-          <div class="round_text">Round</div>
-          <div class="name">Computer</div>
+          <div class="health">
+            <div class="health_bar player_health"></div>
+          </div>
         </div>
-        <div class="health_section">
-          <div class="health"></div>
-          <div class="round-number">0</div>
-          <div class="health"></div>
+        <div class="round">
+          <div class="text">Round</div>
+          <div class="count">0</div>
+        </div>
+        <div class="computer">
+          <div class="name">Computer</div>
+          <div class="health">
+            <div class="health_bar computer_health"></div>
+          </div>
+        </div>
+      </div>
+      <div class="window">
+        <div class="winner">
+          <p class="outcome_winner">Let's beat the computer!</p>
+          <p class="outcome_text">Good luck!</p>
         </div>
         <div class="battle_window">
-          <div class="player_side"></div>
-          <div class="computer_side"></div>
+          <p class="image_holder">?</p>
+          <div class="vs">VS</div>
+          <p class="image_holder">?</p>
         </div>
-        <div class="choose_weapon">
-          <p>Choose your weapon</p>
-        </div>
-        <div class="weapon_section">
-          <img src="./img/rock.png" alt="rock hand gesture" class="weapons" />
-          <img src="./img/paper.png" alt="paper hand gesture" class="weapons" />
+      </div>
+      <div class="choose_weapon">
+        <p>Choose your weapon.</p>
+      </div>
+      <div class="weapon_section">
+        <div class="choice rock">
           <img
-            src="./img/scissor.png"
+            src="./img/icons8-rock-hand-96.png"
+            alt="rock hand gesture"
+            class="weapons"
+          />
+          <p>Rock</p>
+        </div>
+        <div class="choice paper">
+          <img
+            src="./img/icons8-paper-hand-96.png"
+            alt="paper hand gesture"
+            class="weapons"
+          />
+          <p>Paper</p>
+        </div>
+        <div class="choice scissor">
+          <img
+            src="./img/icons8-hand-scissors-96.png"
             alt="scissor hand gesture"
             class="weapons"
           />
+          <p>Scissor</p>
         </div>
       </div>
-      <div class="footer">
-        <p class="copyright">CJ</p>
-      </div>
+    </div>
+    <div class="footer">
+      <p class="copyright">© 2023 cjroma0199. The Odin Project.</p>
     </div>
     <script src="./app.js"></script>
   </body>
