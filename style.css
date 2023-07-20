@@ -41,7 +41,7 @@ body {
   width: 100%;
 }
 .health {
-  min-width: 250px;
+  min-width: 230px;
   height: 20px;
   margin-top: 10px;
   display: flex;
@@ -124,22 +124,23 @@ body {
   width: 80px;
 }
 
-.rock,
-.paper,
-.scissor {
+#rock,
+#paper,
+#scissor {
   transition: transform 0.5s, color 0.5s;
 }
 
-.weapon_section .rock:hover,
-.weapon_section .paper:hover,
-.weapon_section .scissor:hover {
+.weapon_section #rock:hover,
+.weapon_section #paper:hover,
+.weapon_section #scissor:hover {
   cursor: pointer;
   color: #5b8fb9;
   transform: scale(1.1);
 }
 
 .image_holder {
-  font-size: 14em;
+  margin-right: -23px;
+  font-size: 12em;
   color: #fcb830;
 }
 
@@ -150,4 +151,67 @@ body {
 .footer {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
+}
+
+.computer_window,
+.player_window {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.player_window {
+  justify-content: flex-start;
+}
+.computer_window {
+  justify-content: flex-end;
+}
+
+.hide {
+  scale: 0;
+  color: rgba(252, 184, 48, 0);
+  transition: scale 0.4s, color 0.3s;
+}
+
+.choices {
+  width: 100%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

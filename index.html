@@ -10,10 +10,19 @@
     <div class="header">
       <h1 class="title">Rock Paper Scissors</h1>
     </div>
+
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+        <button>Play again</button>
+      </div>
+    </div>
     <div class="container">
       <div class="contender_section">
         <div class="player">
-          <div class="name">Player</div>
+          <div class="name">Human</div>
           <div class="health">
             <div class="health_bar player_health"></div>
           </div>
@@ -35,34 +44,38 @@
           <p class="outcome_text">Good luck!</p>
         </div>
         <div class="battle_window">
-          <p class="image_holder">?</p>
+          <div class="player_window">
+            <span class="image_holder">?</span>
+          </div>
           <div class="vs">VS</div>
-          <p class="image_holder">?</p>
+          <div class="computer_window">
+            <span class="image_holder">?</span>
+          </div>
         </div>
       </div>
       <div class="choose_weapon">
         <p>Choose your weapon.</p>
       </div>
       <div class="weapon_section">
-        <div class="choice rock">
+        <div class="choice" id="rock">
           <img
-            src="./img/icons8-rock-hand-96.png"
+            src="./img/compressed/icons8-rock-hand-96.png"
             alt="rock hand gesture"
             class="weapons"
           />
           <p>Rock</p>
         </div>
-        <div class="choice paper">
+        <div class="choice" id="paper">
           <img
-            src="./img/icons8-paper-hand-96.png"
+            src="./img/compressed/icons8-paper-hand-96.png"
             alt="paper hand gesture"
             class="weapons"
           />
           <p>Paper</p>
         </div>
-        <div class="choice scissor">
+        <div class="choice" id="scissor">
           <img
-            src="./img/icons8-hand-scissors-96.png"
+            src="./img/compressed/icons8-hand-scissors-96.png"
             alt="scissor hand gesture"
             class="weapons"
           />
