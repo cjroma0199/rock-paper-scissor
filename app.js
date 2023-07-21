@@ -180,9 +180,11 @@ weapons.forEach((weapon) =>
           const gameWinner = getGameWinner(score);
 
           if (gameWinner == "player") {
-            modalContent.textContent = "You won!";
+            modalContent.textContent =
+              "Victory is Yours! You've mastered Rock Paper Scissors!";
           } else {
-            modalContent.textContent = "You lost..";
+            modalContent.textContent =
+              "Don't Give Up! You'll beat the Computer next time!";
           }
           modal.style.display = "block";
         }, 800);
